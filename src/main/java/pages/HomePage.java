@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.text.Normalizer;
+
 public class HomePage {
 
     private WebDriver driver;
@@ -46,7 +48,9 @@ public class HomePage {
     }
 
     public String getTxtDayToday(){
-        return txtDayToday.getText();
+        String txtDay = txtDayToday.getText();
+        txtDay = Normalizer.normalize(txtDay, Normalizer.Form.NFD);
+        return txtDay.replaceAll("[^\\p{ASCII}]", "");
     }
 
     public int txtNumToday(){

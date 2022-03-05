@@ -20,9 +20,9 @@ public class HomeTests extends BaseTest {
     @Test
     public void validateDateCalendar()
     {
-        Assert.assertEquals(systemDate.dayOfWeek() , homePage.getTxtDayToday(), "El día de la semana no conincide con el valor esperado.");
-        Assert.assertEquals(systemDate.getDayOfMonth(), homePage.txtNumToday(), "El número del día de la semana no conincide con el valor esperado.");
-        Assert.assertEquals(systemDate.getMonth(), homePage.txtMonthToday(), "El mes no coincide con el valor esperado");
+        Assert.assertEquals(homePage.getTxtDayToday(), systemDate.dayOfWeek(), "El día de la semana no conincide con el valor esperado.");
+        Assert.assertEquals(homePage.txtNumToday(), systemDate.getDayOfMonth(), "El número del día de la semana no conincide con el valor esperado.");
+        Assert.assertEquals(homePage.txtMonthToday(), systemDate.getMonth(), "El mes no coincide con el valor esperado");
     }
 
 

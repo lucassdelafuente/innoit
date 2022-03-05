@@ -32,7 +32,7 @@ public class SystemDate {
                 dayOfWeekString = "Viernes";
                 break;
             case 7:
-                dayOfWeekString = "Sábado";
+                dayOfWeekString = "Sabado";
                 break;
         }
         return dayOfWeekString;
